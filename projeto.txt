@@ -1,15 +1,42 @@
 Título: Sistema Inteligente de Classificação de Risco para Triagem Hospitalar Utilizando Técnicas de Machine Learning
 
-É um sistema feito para os profissionais responsáveis pela triagem nos hospitais (tec, enf, medicos...). Se trata de uma ferramenta e não de um substituto para esses profissionais.
+===================================================================================================================================================================================
+Descrição do Sistema: 
 
-Vamos treinar uma IA com machine learning com os dados do mimic iv.
+O sistema É para auxiliar os profissionais responsáveis pela triagem em hospitais (técnicos de enfermagem, enfermeiros e médicos)
 
-Essa IA vai ser responsável por classificar o paciente e determinar sua posição na fila e cor (protocolo de manchester)
+Trata-se de uma ferramenta de apoio, e não de um substituto para esses profissionais.
 
-O programa vai ter um front, onde o profisisonal insere as informações do paciente
+A proposta é treinar um modelo de Inteligência Artificial utilizando técnicas de Machine Learning com dados do dataset MIMIC-IV.
 
-No front vai ter uma lista mostrando a fila dos pacientes e suas cores baseadas no protocolo, o profisisonal deve poder mudar manualmente.
+Essa IA vai ser responsável por classificar o paciente e sugerir sua posição na fila de atendimento, além de indicar a cor de prioridade, seguindo o Protocolo Manchester.
 
-O sistema deve ser acessado também por um operador responsável por chamar os pacientes, com isso o sistema deve se integrar com um monitor externo para mostrar o paciente chamado.
+===================================================================================================================================================================================
+Front:
 
+O sistema contará com uma interface onde o profissional de saúde poderá inserir as informações do paciente, como dados pessoais, sintomas e sinais vitais.
 
+Também haverá uma lista com a fila de pacientes, mostrando: o nome ou identificação do paciente, a posição na fila e a cor de prioridade baseada no protocolo.
+
+O profissional responsável pela triagem deverá ter a possibilidade de alterar manualmente a classificação sugerida pela IA, caso julgue necessário.
+
+===================================================================================================================================================================================
+Chamadas de Pacientes:
+
+O sistema também deverá ser acessado por um operador responsável por chamar os pacientes para atendimento.
+
+Para isso, o sistema deverá integrar-se a um monitor externo, onde será exibido o nome ou identificação do paciente chamado.
+
+===================================================================================================================================================================================
+
+Estrutura de Dados e Integração:
+
+As informações dos pacientes serão armazenadas em um banco de dados relacional.
+
+O sistema também contará com uma API, responsável por realizar a comunicação entre: 
+
+    o banco de dados
+
+    o front-end do sistema
+
+    o modelo de IA
