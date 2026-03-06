@@ -1,0 +1,15 @@
+Título: Sistema Inteligente de Classificação de Risco para Triagem Hospitalar Utilizando Técnicas de Machine Learning
+
+É um sistema feito para os profissionais responsáveis pela triagem nos hospitais (tec, enf, medicos...). Se trata de uma ferramenta e não de um substituto para esses profissionais.
+
+Vamos treinar uma IA com machine learning com os dados do mimic iv.
+
+Essa IA vai ser responsável por classificar o paciente e determinar sua posição na fila e cor (protocolo de manchester)
+
+O programa vai ter um front, onde o profisisonal insere as informações do paciente
+
+No front vai ter uma lista mostrando a fila dos pacientes e suas cores baseadas no protocolo, o profisisonal deve poder mudar manualmente.
+
+O sistema deve ser acessado também por um operador responsável por chamar os pacientes, com isso o sistema deve se integrar com um monitor externo para mostrar o paciente chamado.
+
+
