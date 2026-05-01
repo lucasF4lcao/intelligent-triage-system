@@ -19,13 +19,20 @@ public class AnaliseTriagemService {
 
     private final AnaliseTriagemRepository analiseTriagemRepository;
     private final SinaisVitaisRepository sinaisVitaisRepository;
+    private final FhirParserService fhirParserService;
+    private final ModeloIaClient modeloIaClient;
+
 
     public AnaliseTriagemService(
             AnaliseTriagemRepository analiseTriagemRepository,
-            SinaisVitaisRepository sinaisVitaisRepository
+            SinaisVitaisRepository sinaisVitaisRepository,
+            FhirParserService fhirParserService,
+            ModeloIaClient modeloIaClient
     ) {
         this.analiseTriagemRepository = analiseTriagemRepository;
         this.sinaisVitaisRepository = sinaisVitaisRepository;
+        this.fhirParserService = fhirParserService;
+        this.modeloIaClient = modeloIaClient;
     }
 
     public AnaliseTriagemResponse criarAnalise(CriarAnaliseRequest request) {
@@ -34,12 +41,6 @@ public class AnaliseTriagemService {
         analise.setData_criacao(LocalDateTime.now());
         analise.setTipo_entrada(request.tipoEntrada());
         analise.setStatus_execucao(StatusExecucao.SUCESSO);
-
-        if (request.tipoEntrada() == TipoEntrada.TEXTO) {
-            analise.setTexto_original(request.textoOriginal());
-        } else {
-            analise.setTexto_original(null);
-        }
 
         analise = analiseTriagemRepository.save(analise);
 
@@ -105,7 +106,6 @@ public class AnaliseTriagemService {
                 analise.getId(),
                 analise.getData_criacao(),
                 analise.getTipo_entrada(),
-                analise.getTexto_original(),
                 sinaisResponse,
                 analise.getCor_prevista(),
                 analise.getConfianca(),

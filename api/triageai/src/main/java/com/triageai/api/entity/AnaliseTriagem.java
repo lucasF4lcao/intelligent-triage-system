@@ -22,7 +22,6 @@ public class AnaliseTriagem {
     private Long id;
 
     private LocalDateTime data_criacao;
-    private String texto_original;
 
     @Enumerated(EnumType.STRING)
     private TipoEntrada tipo_entrada;

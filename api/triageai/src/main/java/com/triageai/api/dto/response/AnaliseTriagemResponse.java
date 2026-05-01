@@ -11,7 +11,6 @@ public record AnaliseTriagemResponse(
         Long id,
         LocalDateTime dataCriacao,
         TipoEntrada tipoEntrada,
-        String textoOriginal,
         SinaisVitaisResponse sinaisVitais,
         CorManchester corPrevista,
         BigDecimal confianca,
