@@ -10,7 +10,7 @@ public class WebClientConfig {
     @Bean
     public WebClient webClient(WebClient.Builder builder) {
         return builder
-                .baseUrl("http://localhost:5000")
+                .baseUrl("https://modelo-api-j2fd.onrender.com")
                 .build();
     }
 }
