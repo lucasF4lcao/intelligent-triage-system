@@ -1,0 +1,15 @@
+data/
+*.csv
+*.parquet
+*.zip
+
+modelo-ia/__pycache__/
+venv/
+*.pyc
+
+.idea/
+*.iml
+
+*.log
+
+.env
