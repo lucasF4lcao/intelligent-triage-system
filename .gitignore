@@ -3,6 +3,9 @@ data/
 *.parquet
 *.zip
 
+# MIMIC-IV-ED - dados restritos do PhysioNet
+data/
+
 modelo-ia/__pycache__/
 venv/
 *.pyc
@@ -13,3 +16,4 @@ venv/
 *.log
 
 .env
+models/
